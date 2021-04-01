@@ -1,0 +1,149 @@
+<!-- Doctype declaration -->
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<!-- Define head and page title -->
+<head>
+
+    <meta charset = "UTF-8">
+    <title>Mission to Mars</title>
+
+    <!-- Set the viewport for browsing with all devices -->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0, shrink-to-fit = no">
+  
+    <!-- Links to reference bootstrap and CSS stylesheets -->
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
+    <link rel = "stylesheet" href = "Resources/styles.css">
+
+    <!-- Bootstrap JavaScript links:  jQuery and Bootstrap JavaScript -->
+    <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity = "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin = "anonymous "></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin = "anonymous "></script>
+
+</head>
+
+<!-- START OF CONTENT -->
+
+<!-- Define Bootstrap Container for Header Section -->
+<div class = "container-fluid" style = "background-color:  #eeeeee">
+
+    <!-- Row 1 -->
+    <div class = "row pb-3">
+
+        <!-- Column 1 -->
+        <div class = "col-md-12 col-lg-12 mt-5 text-center">
+            <h1>Mission to Mars</h1>
+                <a class = "btn btn-primary" style = "background-color:  #3379b7" href = "/scrape" role = "button">Scrape New Data</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Define Bootstrap Container for Remaining Content -->
+<div class = "container-fluid">
+
+    <!-- MARS NEWS -->
+
+    <!-- Row 2 -->
+    <div class = "row pb-3">
+
+        <!-- Column 1 -->
+        <div class = "col-md-12 col-lg-12 mt-5 text-left">
+            <h3>Latest Mars News</h3>
+            <h5>{{newsTitle}}</h5>
+            <p>{{paragraphText}}</p>
+        </div>
+    </div>
+
+    <!-- JPL FEATURED IMAGE AND MARS FACTS -->
+
+    <!-- Row 3 -->
+    <div class = "row pb-3">
+
+        <!-- Column 1:  JPL Mars Space Images - Featured Image -->
+        <div class = "col-md-12 col-lg-7 mt-5">
+            <h3>Featured Mars Image</h3>
+            <img src = "{{featured_image_url}}" alt = "Featured Image" id = "featured-image">
+        </div>
+
+        <!-- Column 2:  Mars Facts -->
+        <div class = "col-md-12 col-lg-5 mt-5">
+            <h5>Mars Facts</h5>
+                <div class = "table-responsive">
+                    <table width = "97% border = "1" class = "center">
+
+
+                    </table>
+
+
+
+
+
+                </div>
+        </div>
+    </div>
+
+    <!-- MARS HEMISPHERES -->
+
+    <!-- Row 4 -->
+    <div class = "row pb-3">
+
+        <!-- Column 1 -->
+        <div class = "col-md-12 col-lg-12 mt-5 text-center">
+            <h3>Mars Hemispheres</h3>
+            <hr>
+        </div>
+
+    </div>
+
+    <!-- Row 5 -->
+    <div class = "row pb-3">
+        
+        <!-- Column 1 -->
+        <div class = "col-md-12 col-lg-3 mt-5 text-center">
+            <img class = "img-fluid" src = {{hemisphere_image_urls[0].img_url}} alt = {{hemisphere_image_urls[0].title}}>
+            <h5>{{hemisphere_image_urls[0].title}}</h5>
+        </div>
+
+        <!-- Column 2 -->
+        <div class = "col-md-12 col-lg-3 mt-5 text-center">
+            <img class = "img-fluid" src = {{hemisphere_image_urls[1].img_url}} alt = {{hemisphere_image_urls[1].title}}>
+            <h5>{{hemisphere_image_urls[1].title}}</h5>
+        </div>
+
+        <!-- Column 3 -->
+        <div class = "col-md-12 col-lg-3 mt-5 text-center">
+            <img class = "img-fluid" src = {{hemisphere_image_urls[2].img_url}} alt = {{hemisphere_image_urls[2].title}}>
+            <h5>{{hemisphere_image_urls[2].title}}</h5>
+        </div>
+
+        <!-- Column 4 -->
+        <div class = "col-md-12 col-lg-3 mt-5 text-center">
+            <img class = "img-fluid" src = {{hemisphere_image_urls[3].img_url}} alt = {{hemisphere_image_urls[3].title}}>
+            <h5>{{hemisphere_image_urls[3].title}}</h5>
+        </div>
+        
+    </div>
+
+    <!-- Row 6 -->
+    <div class = "row">
+
+        <!-- Column 1 -->
+        <div class = "col-md-12 col-lg-12">
+        <hr>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

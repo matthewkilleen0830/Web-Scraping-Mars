@@ -1,0 +1,30 @@
+/* CSS Stylesheet */
+
+.text-center {
+    text-align:  center;
+    font-size:  50px;
+    font-weight:  bold;
+    color:  white;
+    font-family:  "Arial", sans-serif;
+    padding-top: 60px;
+}
+
+.btn {
+    text-align:  center;
+    font-family:  "Arial", sans-serif;
+    font-size:  16px;
+    font-weight:  bold;
+    color:  #ffffff;
+    vertical-align:  middle;
+    height:  40px;
+    cursor:  pointer;
+    border-radius:  10px;
+}
+
+.btn-primary {
+    padding-top:  5px;
+    padding-bottom:  5px;
+    padding-left:  10px;
+    padding-right:  10px;
+    background-color:  #3379b7;
+}

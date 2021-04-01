@@ -1,14 +1,13 @@
 # Dependencies and setup
 from flask import Flask, render_template, redirect
-import pymongo
+from flask_pymongo import PyMongo
 import scrape_mars
 
 # Create instance of Flask app
 app = Flask(__name__)
 
 # Initialize PyMongo to work with MongoDBs (this needs work with tutor)
-conn = "mongodb://localhost:27017"
-client = pymongo.MongoClient(conn)
+mongo = PyMongo(app, uri = "mongodb://localhost:27017/marsApp")
 marsData = mongo.db.marsData
 
 # Create route that renders index.html template
@@ -27,7 +26,7 @@ def scrape():
     marsData.update({}, scrapedData, upsert = True)
 
     # Redirect to landing page
-    return redirect("/index.html)
+    return redirect("/")
 
 # Define main behavior
 if __name__ == "__main__":

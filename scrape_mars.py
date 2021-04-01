@@ -12,7 +12,8 @@ import pymongo
 def scrape():
 
     # Initialize browser/set up Splinter (this needs work with tutor)
-    executable_path = {"executable_path":ChromeDriverManager().install()}
+    executable_path = {"executable_path": "/Users/matth/.wdm/drivers/chromedriver/win32/89.0.4389.23"}
+    # executable_path = {"executable_path":ChromeDriverManager().install()}
     browser = Browser("chrome", **executable_path, headless = False)
 
     # NASA Mars News -----------------------------------------------------------------
