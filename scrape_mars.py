@@ -38,7 +38,7 @@ def scrape():
     # Parse HTML with BeautifulSoup
     imageSoup = bs(imageHTML, "html.parser")
 
-    # Find href within anchor tag element
+    # Find href link within anchor tag element
     featuredImage = imageSoup.find("a", class_ = "showimg fancybox-thumbs")["href"]
 
     # Declare variable and combine main URL with link
@@ -74,7 +74,7 @@ def scrape():
     # Declare variable to store scraped links
     imageLinks = browser.find_by_css("a.itemLink img")
 
-    # Iterate through each element
+    # Iterate through each page and scrape links
     for link in range(len(imageLinks)):
         
         # Create empty dictionary
