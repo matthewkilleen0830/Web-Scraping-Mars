@@ -21,12 +21,6 @@ def scrape():
     browser.visit(newsURL)
     time.sleep(1)
     
-    # HTML object
-    # html = browser.html
-    
-    # Parse HTML with BeautifulSoup
-    # soup = bs(html, "html.parser")
-    
     # Declare variables to store scraped Title and Teaser 
     newsTitle = browser.find_by_css(".content_title")[0].text
     paragraphText = browser.find_by_css(".article_teaser_body")[0].text
@@ -73,15 +67,6 @@ def scrape():
     hemispheresURL = "https://marshemispheres.com/"
     browser.visit(hemispheresURL)
     time.sleep(1)
-
-    # HTML object
-    # hemispheresHTML = browser.html
-    
-    # Parse HTML with BeautifulSoup
-    # hemispheresSoup = bs(hemispheresHTML, "html.parser")
-    
-    # Retrieve all elements that contain image URLs to the full resolution image
-    # links = hemispheresSoup.find_all("div", class_ = "")
 
     # Create empty list to be appended with dictionary
     hemisphere_image_urls = []

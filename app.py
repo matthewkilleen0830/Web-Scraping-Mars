@@ -21,11 +21,12 @@ def index():
 # Create a route called /scrape that will import your scrape_mars.py script and call your scrape function
 @app.route("/scrape")
 def scrape():
-
+    
     collection = mongo.db.collection
 
     # Call scrape function
     scrapedData = scrape_mars.scrape()
+    print(scrapedData)
 
     # Update MongoDB with scraped data
     collection.update({}, scrapedData, upsert = True)
